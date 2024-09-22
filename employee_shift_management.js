@@ -65,17 +65,14 @@ let employees = [
     } else {
       // Add the new shift
       employee.shifts.push({ day, hours });
-      console.log(`Shift added: ${employeeName} now works on ${day} for ${hours} hours.`);
+      console.log(`Shift added: ${employeeName} works on ${day} for ${hours} hours.`);
     }
   }
   
-  // Example usage:
+  // Example:
   
   assignShift("Alice", "Friday", 6); //assign a new shift to Alice
   assignShift("Ben", "Friday", 6); // assign employee Ben who does not exist
   assignShift("Alice", "Monday", 4);// assign a shift on a day she already works
-
-
-
 
 
