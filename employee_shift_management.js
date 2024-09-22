@@ -75,4 +75,24 @@ let employees = [
   assignShift("Ben", "Friday", 6); // assign employee Ben who does not exist
   assignShift("Alice", "Monday", 4);// assign a shift on a day she already works
 
+ // Task 4: Function to Calculate Total Hours Worked
+
+ function calculateTotalHours(employeeName) {
+    
+    const employee = employees.find(empl => empl.name === employeeName); // Find the employee by name
+    
+    if (employee) {
+        
+        const totalHours = employee.shifts.reduce((total, shift) => total + shift.hours, 0); // Sum up the hours of all shifts
+        console.log(`${employeeName} worked ${totalHours} hours this week.`);
+        return totalHours;
+    } else {
+        console.log(`Error: Employee ${employeeName} not found.`);
+        return 0;
+    }
+}
+
+console.log("Calculating total hours worked:");
+calculateTotalHours('Alice');
+
 
